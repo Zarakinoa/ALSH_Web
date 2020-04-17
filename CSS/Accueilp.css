@@ -1,0 +1,450 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: white;
+}
+
+/**************************************************************************************En tête*************************************************************************************/
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #03a9f4;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/*Logo*/
+
+#logo
+{
+  top: 4%;
+  left: 5%;
+  position: absolute;
+  width: 500px;
+  height: 200px;
+}
+
+
+
+/***************************************************************************************Menu**************************************************************************************/
+
+ ul
+ {
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+
+li 
+{
+  z-index: 2;
+  display: block;
+  text-decoration: none;  
+  text-align: center;
+  list-style: none;
+  float: left;
+  position: relative;
+  background-color: black;
+}
+
+ ul li 
+{    
+  z-index: 2;
+  width: 468px;
+  top: 0px;
+  height: 50px;
+  color:white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+
+ul li a
+{    
+  z-index: 2;
+  text-decoration: none;
+  color: white;
+}
+ li:hover {    
+  z-index: 2;
+  background-color: #03a9f4;
+}
+
+ul ul
+{    
+  z-index: 2;
+  position:relative;
+  visibility: hidden;
+}
+
+ ul li:hover ul
+{  
+  z-index: 2;
+  visibility: visible;
+}
+
+
+
+/*********************************************************************************Mise en page************************************************************************************/
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  color: white;
+}
+
+.leftcolumn .card p
+{
+  font-size: 31px;
+}
+
+.rightcolumn {
+  color: white;
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: black;
+  border-radius: 10px;
+  opacity: 0.8;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card a 
+{ 
+  text-decoration: none;
+  color: #03a9f4;
+}
+
+
+/********************************************************************************Page connexion***********************************************************************************/
+
+#box0
+{
+  position: relative;
+  top: 165px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  padding: 40px;
+  background: rgba(0,0,0,0.8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px black;
+  border-radius: 10px;  
+  margin-top: 10px;
+}
+
+#box0 h2
+{
+  margin: 0 0 30px;
+  padding: 0;
+  color: #03a9f4;
+  text-align: center;
+}
+
+#box0 #box1
+{ 
+  position: relative;
+}
+
+#box0 #box1 input
+{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border:none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background:transparent;
+}
+
+#box0 #box1 label
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #03a9f4;
+  pointer-events: none;
+  transition: 0.5s;
+}
+#box0 #box1 input:focus ~ label,
+#box0 #box1 input:valid ~ label
+{
+  top: -18px;
+  left: 0;
+  color: #03a9f4;
+  font-size: 12px;
+}
+
+#box0 input[type="submit"]
+{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  background: #03a9f4;
+  padding: 10px 20px;
+  cursor: pointer;;
+  border-radius: 5px;
+
+}
+
+
+
+
+/************************************************************************************Diaporama************************************************************************************/
+
+#Diapo
+{
+  top: 10px;  
+  width: 100%;
+  height: 400px;
+  border: 5px;
+  border-bottom: 5px solid black;
+  border-radius: 5px;
+  background: url("/Projet/Image/Diapo/1.jpg");
+  background-size: cover;
+
+
+  animation-name: Diapo;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+@keyframes Diapo
+{
+  0%{background-image: url("/Projet/Image/Diapo/1.jpg");}
+  10%{background-image: url("/Projet/Image/Diapo/2.jpg");}
+  20%{background-image: url("/Projet/Image/Diapo/3.jpg");}
+  30%{background-image: url("/Projet/Image/Diapo/4.jpg");}
+  40%{background-image: url("/Projet/Image/Diapo/5.jpg");}
+  50%{background-image: url("/Projet/Image/Diapo/6.jpg");}
+  60%{background-image: url("/Projet/Image/Diapo/7.jpg");}
+  70%{background-image: url("/Projet/Image/Diapo/8.jpg");}
+  80%{background-image: url("/Projet/Image/Diapo/9.jpg");}
+  90%{background-image: url("/Projet/Image/Diapo/10.jpg");}
+  100%{background-image: url("/Projet/Image/Diapo/11.jpg");}
+}
+
+
+
+/************************************************************************************footer***************************************************************************************/
+
+.row {
+  z-index: 1;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  height: 200px;
+  padding: 20px;
+  background: #03a9f4;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.titreF h2
+{
+  float: left;
+  top: 0;
+
+}
+
+.sociaux
+{
+  left: 40%;
+  float: left;
+  position: relative;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.sociaux img
+{
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+}
+
+.apFacebook,.apTwitter,.apInstagram,.apYoutube
+{
+  top: -80px;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  height: 80px;
+  width: 80px;
+  transition: 0.5s;
+} 
+
+.apFacebook
+{
+  background-color: #3b5999;
+}
+
+.apTwitter
+{
+  background-color: #55acee;
+}
+
+.apInstagram /*background recuperer via https://stackoverflow.com/questions/37751375/instagram-new-logo-css-background*/
+{
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+              radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
+              radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
+              radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
+              radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
+              radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
+              radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+              linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+}
+
+.apYoutube
+{
+  background-color: #c4302b;
+}
+
+.sociaux:hover .apFacebook
+{
+  top: 0;
+}
+
+.sociaux:hover .apTwitter
+{
+  top: 0;
+}
+
+.sociaux:hover .apInstagram
+{
+  top: 0;
+}
+
+.sociaux:hover .apYoutube
+{
+  top: 0;
+}
+
+
+.titreF
+{
+  font-size: 40px;
+  color: black;
+}
+
+.titreF .contact 
+{
+  position: absolute;
+  left: 10%;
+  margin-top: -40px;
+
+
+}
+
+.titreF .reseau
+{
+  position: absolute;
+  left: 40.5%;
+  margin-top: -40px;
+
+
+}
+
+.titreF .galerie
+{
+  position: absolute;
+  left: 70%;
+  margin-top: -40px;
+
+}
+
+.icone 
+{
+  position: absolute;
+  left: 35%;
+  margin-top: 80px;
+}
+
+
+
+.titreF  .photo a
+{
+  font-size: 60px;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  left: 75%;
+  margin-top: 90px;
+}
+
+.titreF .c1,.c2,.c3,.c4
+{
+  font-size: 20px;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  left: 10.2%;
+}
+
+.titreF .c1
+{
+  font-size: 23px;
+  margin-top: 70px;
+  font-weight: bold;
+}
+
+.titreF .c2
+{
+  margin-top: 100px;
+}
+
+.titreF .c3
+{
+  margin-top: 120px;
+}
+
+.titreF .c4 
+{
+   margin-top: 140px;
+}
+
+.titreF  .c4 a
+{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  left: 10.2%;
+  margin-top: 130px;
+  text-decoration: underline;
+}
+
+
+
